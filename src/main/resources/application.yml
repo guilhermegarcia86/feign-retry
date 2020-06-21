@@ -7,8 +7,8 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
 
-retryMaxAttempt: 5
-retryInterval: 2000
+retryMaxAttempt: ${RETRY_MAX_ATTEMPT:5}
+retryInterval: ${RETRY_INTERVAL:2000}
 cronTimer:
-  reprocess: "0 */1 * * * *"
-externalUrl: "http://api.postmon.com.br"
+  reprocess: ${CRON_REPROCESS:0 */1 * * * *}
+externalUrl: ${EXTERNAL_URL:http://api.postmon.com.br}
