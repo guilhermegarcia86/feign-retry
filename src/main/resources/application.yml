@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+retryMaxAttempt: 5
+retryInterval: 2000
+cronTimer:
+  reprocess: "0 */1 * * * *"
+externalUrl: "http://api.postmon.com.br"
